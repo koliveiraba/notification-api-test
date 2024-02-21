@@ -18,8 +18,8 @@ async def send_notification():
   await notificationapi.send({
     "notificationId": "order_tracking",
     "user": {
-      "id": "kbarros@incomm.com",
-      "email": "kbarros@incomm.com",
+      "id": os.getenv('USER_ID'),
+      "email": os.getenv("USER_EMAIL"),
       "number": os.getenv('PERSONAL_NUMBER')
     },
     "mergeTags": {
